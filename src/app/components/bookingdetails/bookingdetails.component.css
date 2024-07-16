@@ -1,0 +1,32 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.list-group-item {
+  border: none;
+  padding: 12px 20px;
+}
+
+.list-group-item:nth-child(odd) {
+  background-color: #f8f9fa; /* Alternate row background color */
+}
+
+.list-group-item strong {
+  width: 150px; /* Fixed width for labels */
+  display: inline-block;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+}

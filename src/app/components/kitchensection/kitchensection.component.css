@@ -1,0 +1,21 @@
+/* kitchensection.component.css */
+.card-header {
+  font-weight: bold;
+}
+
+.card-text strike {
+  color: red;
+}
+
+.card-text h5 {
+  margin-bottom: 1rem;
+}
+
+.card a {
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

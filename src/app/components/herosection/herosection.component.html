@@ -1,0 +1,178 @@
+<div id="carouselExampleSlidesOnly carousel-section" class="carousel slide " data-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let image of imageSlider; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+      <img class="d-block w-100" [src]="image" alt="Slide {{i + 1}}">
+    </div>
+  </div>
+</div>
+  <!-- Search City -->
+  <div class=" text-center mb-5 search-city ">
+    <h2>Find Cleaning Services in Your City</h2>
+    <div class="input-group mb-3 mx-auto" style="width: 80%;">
+      <input type="text" class="form-control" placeholder="Enter city" aria-label="Enter city" aria-describedby="button-search">
+      <button class="btn btn-primary" type="button" id="button-search">Search</button>
+    </div>
+  </div>
+
+  <!-- Cleaning Services -->
+   <div class="cleaning-service">
+  <div class="mt-4 container" >
+    <h2 class="text-center cleaning-heading">COMPARE AND BOOK TOP-RATED CERTIFIED <br>PROFESSIONALS  ONLINE</h2>
+    <div class="row cleaning-card ">
+      <div class="col-md-4 mb-4 " *ngFor="let service of cleaningServices">
+        <div class="card h-100">
+          <img [src]="service.image" class="card-img-top image-service" alt="{{ service.name }}">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ service.name }}</h5>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" mt-4 popular-service ">
+  <!-- Popular Cleaning Services -->
+  <div class="mt-5 container">
+    <h2 class="text-center mb-5">Popular Cleaning Services</h2>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4" *ngFor="let service of popularServices">
+        <div class="h-100 ">
+          <div class="p-image-section">
+            <img [src]="service.image" class="card-img-top border-0 rounded" alt="{{ service.name }}">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ service.name }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Features Section -->
+  <div class=" p-4 bg-light rounded">
+    <div class="container">
+    <h2 class="text-center mb-5  mt-5">Why Choose Us?</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-5" *ngFor="let feature of features">
+        <div class="feature-box">
+          <i [class]="feature.icon" class="feature-icon"></i>
+          <h4>{{ feature.title }}</h4>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- our client Section -->
+ 
+<div class="p-4 bg-light rounded">
+  <div class="container">
+
+  <h2 class="text-center mb-5 ">Our Clients and Partners</h2>
+  <div class="row text-center">
+    <div class="col-md-3 mb-4" *ngFor="let client of clients">
+      <div class="client-box">
+        <img [src]="client.logo"  class="client-logo img-fluid mb-3">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- statistics-->
+ <div class="statistics">
+<div class="container ">
+  <div class="row pt-5 pb-5">
+    <div class="col-md-3">
+      <div class="mb-3">
+        <div class="card-body text-center">
+          <p class="card-text">{{ statistics[0].value }}M+</p>
+          <h5 class="card-title">{{ statistics[0].label }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="mb-3">
+        <div class="card-body text-center">
+          <p class="card-text">{{ statistics[1].value }}%</p>
+          <h5 class="card-title">{{ statistics[1].label }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="mb-3">
+        <div class="card-body text-center">
+          <p class="card-text">{{ statistics[2].value }}K+</p>
+          <h5 class="card-title">{{ statistics[2].label }}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="mb-3">
+        <div class="card-body text-center">
+          <p class="card-text">{{ statistics[3].value }}M+</p>
+          <h5 class="card-title">{{ statistics[3].label }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<!-- footer section -->
+<footer class="footer ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Contact Info</h5>
+        <p>Bhosari, Pune</p>
+        <p><a href="#">+91-9922992299</a></p>
+        <p><a href="#">helpandsupport.com</a></p>
+        <p>We reply within 1 work day</p>
+        <p><strong>Working Hours:</strong><br>9:00 AM - 9:00 PM<br>Monday To Sunday</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h5>Our Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Sofa Deep Cleaning</a></li>
+          <li><a href="#">Full Home Cleaning</a></li>
+          <li><a href="#">Office Cleaning</a></li>
+          <li><a href="#">Kitchen Deep Cleaning</a></li>
+          <li><a href="#">Bathroom Deep Cleaning</a></li>
+          <!-- Add more services as needed -->
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center">
+      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+
+ 
+

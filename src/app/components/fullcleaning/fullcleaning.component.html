@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let service of services">
+      <div class="card">
+        <img [src]="service.imageUrl" class="card-img-top" alt="Service Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ service.name }}</h5>
+          <p class="card-text">{{ service.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ service.price }}</p>
+          <p class="card-text"><strong>Type:</strong> {{ service.type }}</p>
+          <a [routerLink]="['/booking', service.name, service.price]" class="btn btn-primary btn-block">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

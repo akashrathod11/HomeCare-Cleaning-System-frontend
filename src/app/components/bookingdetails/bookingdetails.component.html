@@ -1,0 +1,31 @@
+<div class="container mt-5" *ngIf="booking">
+  <h2 class="mb-4">Booking Details</h2>
+  
+  <div class="card">
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>Booking ID:</strong> {{ booking.bookingId }}
+        </li>
+        <li class="list-group-item">
+          <strong>Customer Name:</strong> {{ booking.customerName }}
+        </li>
+        <li class="list-group-item">
+          <strong>Service Name:</strong> {{ booking.serviceName }}
+        </li>
+        <li class="list-group-item">
+          <strong>Booking Date:</strong> {{ booking.bookingDate | date }}
+        </li>
+        <li class="list-group-item">
+          <strong>Service Date:</strong> {{ booking.serviceDate | date }}
+        </li>
+        <li class="list-group-item">
+          <strong>Status:</strong> {{ booking.status }}
+        </li>
+        <li class="list-group-item">
+          <strong>Price:</strong> {{ booking.price | currency:'INR' }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

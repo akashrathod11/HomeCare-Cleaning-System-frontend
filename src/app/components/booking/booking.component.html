@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <h2>Booking Form</h2>
+  <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+    <div class="mb-3">
+      <label for="customerName" class="form-label">Customer Name</label>
+      <input type="text" class="form-control" id="customerName" [(ngModel)]="booking.customerName" name="customerName" required>
+      <!-- Angular validation message -->
+      <div *ngIf="bookingForm.controls['customerName'].invalid && (bookingForm.controls['customerName'].dirty || bookingForm.controls['customerName'].touched)" class="text-danger">
+        Customer Name is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="serviceName" class="form-label">Service Name</label>
+      <input type="text" class="form-control" id="serviceName" [(ngModel)]="booking.serviceName" name="serviceName" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="bookingDate" class="form-label">Booking Date</label>
+      <input type="date" class="form-control" id="bookingDate" [(ngModel)]="booking.bookingDate" name="bookingDate" required>
+      <!-- Angular validation message -->
+      <div *ngIf="bookingForm.controls['bookingDate'].invalid && (bookingForm.controls['bookingDate'].dirty || bookingForm.controls['bookingDate'].touched)" class="text-danger">
+        Booking Date is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="serviceDate" class="form-label">Service Date</label>
+      <input type="date" class="form-control" id="serviceDate" [(ngModel)]="booking.serviceDate" name="serviceDate" required>
+      <!-- Angular validation message -->
+      <div *ngIf="bookingForm.controls['serviceDate'].invalid && (bookingForm.controls['serviceDate'].dirty || bookingForm.controls['serviceDate'].touched)" class="text-danger">
+        Service Date is required.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="status" class="form-label">Status</label>
+      <input type="text" class="form-control" id="status" [(ngModel)]="booking.status" name="status" required>
+      <!-- Angular validation message -->
+      <div *ngIf="bookingForm.controls['status'].invalid && (bookingForm.controls['status'].dirty || bookingForm.controls['status'].touched)" class="text-danger">
+        Status is required.
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <label for="price" class="form-label">Price:</label>
+      <div class="input-group-prepend">
+        <div class="input-group-text">$</div>
+      </div>
+      <input type="number" class="form-control" id="price" name="price" [(ngModel)]="booking.price" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLabel">Booking Successful</h5>
+        <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your booking has been successfully placed.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
